@@ -22,7 +22,11 @@ void pop(stack_t **stack, __attribute__((unused)) unsigned int line_number)
     }
     else
     {
+
         free(*stack);
         *stack = NULL;
+        top = NULL;
+        bottom = NULL;
     }
+    stack_length--;
 }

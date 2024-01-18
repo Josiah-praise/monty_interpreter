@@ -1,10 +1,6 @@
-            push 23
-            push 45
-push 43
-                
-    push 45
-            pall
-            push 50
 
-            pall
-pop this is the end
+push 3
+push 4
+push 5
+swap
+pall

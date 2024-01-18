@@ -21,7 +21,7 @@ stack_t *create_node()
         free_stack();
         malloc_error();
     }
-    if (token_array[1] == NULL || atoi(token_array[1]) == 0)
+    if (token_array[1] == NULL || (atoi(token_array[1]) == 0  && token_array[1][0] != '0'))
     {
         free(node);
         push_error();

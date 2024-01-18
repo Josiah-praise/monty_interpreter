@@ -5,10 +5,10 @@ void pall(__attribute__((unused)) stack_t **stack, __attribute__((unused)) unsig
 {
     stack_t *tmp;
 
-    if (stack_length == 0)
+    if (arguments.stack_length == 0)
         return;
     
-    tmp = top;
+    tmp = arguments.top;
 
     while (tmp)
     {

@@ -2,9 +2,9 @@
 
 void push_error()
 {
-    dprintf(2, "L%d: usage: push integer\n", line_number);
+    dprintf(2, "L%d: usage: push integer\n", arguments.line_number);
     free_token_array();
-    fclose(fp);
+    fclose(arguments.fp);
     free_stack();
 	exit(EXIT_FAILURE);
 }
@@ -21,13 +21,13 @@ stack_t *create_node()
         free_stack();
         malloc_error();
     }
-    if (token_array[1] == NULL || (atoi(token_array[1]) == 0  && token_array[1][0] != '0'))
+    if (arguments.token_array[1] == NULL || (atoi(arguments.token_array[1]) == 0  && arguments.token_array[1][0] != '0'))
     {
         free(node);
         push_error();
     }
         
-    node->n = atoi(token_array[1]);
+    node->n = atoi(arguments.token_array[1]);
     node->next = node->prev = NULL;
     return (node);
 }

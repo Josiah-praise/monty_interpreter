@@ -10,10 +10,10 @@ void push(stack_t **stack, __attribute__((unused)) unsigned int line_number)
     */
    /*increament stack_length by 1*/
    node = create_node();
-   if (stack_length == 0) /*in the case that the stack has no nodes*/
+   if (arguments.stack_length == 0) /*in the case that the stack has no nodes*/
    {
         *stack = node;
-        bottom = node;
+        arguments.bottom = node;
    }
    else
    {
@@ -21,5 +21,5 @@ void push(stack_t **stack, __attribute__((unused)) unsigned int line_number)
         (*stack)->next = node;
         *stack = node; /*updating the top pointer*/
    }
-   stack_length++;
+   arguments.stack_length++;
 }

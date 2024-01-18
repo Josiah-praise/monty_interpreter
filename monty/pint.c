@@ -2,16 +2,16 @@
 
 void pint_error()
 {
-    dprintf(2, "L%d: can't pint, stack empty\n", line_number);
+    dprintf(2, "L%d: can't pint, stack empty\n", arguments.line_number);
     free_token_array();
-    fclose(fp);
+    fclose(arguments.fp);
     free_stack();
 	exit(EXIT_FAILURE);
 }
 
 void pint(stack_t **stack, __attribute__((unused))unsigned int line_number)
 {
-    if (top == NULL)
+    if (arguments.top == NULL)
         pint_error();
     printf("%d\n", (*stack)->n);
 }

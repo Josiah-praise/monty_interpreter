@@ -5,5 +5,5 @@ void set_filename_arg(char **argv)
      if (argv[1] == NULL)
         usage_error();
 
-    strcpy(filename, argv[1]);
+    strcpy(arguments.filename, argv[1]);
 }

@@ -2,9 +2,9 @@
 
 void pop_error()
 {
-    dprintf(2, "L%d: can't pop an empty stack\n", line_number);
+    dprintf(2, "L%d: can't pop an empty stack\n", arguments.line_number);
     free_token_array();
-    fclose(fp);
+    fclose(arguments.fp);
     free_stack();
 	exit(EXIT_FAILURE);
 }
@@ -25,8 +25,8 @@ void pop(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 
         free(*stack);
         *stack = NULL;
-        top = NULL;
-        bottom = NULL;
+        arguments.top = NULL;
+        arguments.bottom = NULL;
     }
-    stack_length--;
+    arguments.stack_length--;
 }

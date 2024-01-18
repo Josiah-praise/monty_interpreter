@@ -2,8 +2,8 @@
 
 void open_file()
 {
-    fp = fopen(filename, "r");
+    arguments.fp = fopen(arguments.filename, "r");
 
-    if (fp == NULL)
+    if (arguments.fp == NULL)
         cant_open_error();
 }

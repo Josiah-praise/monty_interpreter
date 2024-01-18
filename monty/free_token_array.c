@@ -4,10 +4,10 @@ void free_token_array()
 {
     int i = 0;
 
-    while (token_array[i] != NULL)
+    while (arguments.token_array[i] != NULL)
     {
-        free(token_array[i]);
+        free(arguments.token_array[i]);
         i++;
     }
-    token_array[0] = NULL;
+    arguments.token_array[0] = NULL;
 }

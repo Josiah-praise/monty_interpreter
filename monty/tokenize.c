@@ -8,8 +8,8 @@ void tokenize()
     char *buffer;
     int i = 0;
 
-    token_array[0] = NULL;
-    strcpy(line_dup, line);
+    arguments.token_array[0] = NULL;
+    strcpy(line_dup, arguments.line);
 
     token = strtok(line_dup, delim);
 
@@ -22,9 +22,9 @@ void tokenize()
             malloc_error();
         }
         fill_token_array(buffer, token);
-        token_array[i] = buffer;
+        arguments.token_array[i] = buffer;
         token = strtok(NULL, delim);
         i++;
     }
-    token_array[i] = NULL; /*null terminate token array*/
+    arguments.token_array[i] = NULL; /*null terminate token array*/
 }

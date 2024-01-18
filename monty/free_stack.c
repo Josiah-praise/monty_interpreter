@@ -2,7 +2,7 @@
 
 void free_stack()
 {
-    stack_t *current = bottom;
+    stack_t *current = arguments.bottom;
     stack_t *nextNode;
 
     /* Traverse the list and free each node*/

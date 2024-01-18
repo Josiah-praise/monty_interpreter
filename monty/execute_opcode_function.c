@@ -2,5 +2,5 @@
 
 void execute_opcode_function()
 {
-    opcode_function(&top, line_number);
+    arguments.opcode_function(&(arguments.top), arguments.line_number);
 }

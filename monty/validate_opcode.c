@@ -4,19 +4,27 @@ void validate_opcode()
 {
     int i = 0;
     int found = 0;
+    instruction_t instructions[] = {
+        {"push", &push},
+        {"pall", &pall},
+        {"pint", &pint},
+        {"pop", &pop},
+        {"swap", &swap},
+		{NULL, NULL}
+	};
 
-    if (token_array[0] == NULL || *(token_array[0]) == '#')
+    if (arguments.token_array[0] == NULL || *(arguments.token_array[0]) == '#')
     {
-        comment = 1;
+        arguments.comment = 1;
         return;
     }
 
     while (instructions[i].opcode != NULL)
     {
-        if (strcmp(instructions[i].opcode, token_array[0]) == 0)
+        if (strcmp(instructions[i].opcode, arguments.token_array[0]) == 0)
         {
             found = 1;
-            opcode_function = instructions[i].f;
+            arguments.opcode_function = instructions[i].f;
             break;
         }
         i++;

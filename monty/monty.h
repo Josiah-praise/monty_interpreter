@@ -39,23 +39,28 @@ typedef struct instruction_s
 char *opcode;
 void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+typedef struct argument_s
+{
+FILE *fp;
+char line[MAX];
+char filename[MAX];
+char *token_array[MAX];
+unsigned int comment;
+unsigned int line_number;
+void (*opcode_function)(stack_t **stack, unsigned int line_number);
+stack_t *top;
+unsigned int stack_length;
+unsigned int stack_flag;
+stack_t *bottom;
+} argument_t;
 /*===============================Structs=================================================================*/
 
 
 
 
 /*======================Global Variables===========================*/
-extern FILE *fp;
-extern char line[MAX];
-extern char filename[MAX];
-extern char *token_array[MAX];
-extern instruction_t instructions[];
-extern unsigned int comment;
-extern unsigned int line_number;
-extern void (*opcode_function)(stack_t **stack, unsigned int line_number);
-extern stack_t *top;
-extern unsigned int stack_length;
-extern stack_t *bottom;
+extern argument_t arguments;
 /*======================Global Variables===========================*/
 
 
@@ -82,6 +87,7 @@ void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
+void initialize_arguments();
 /*=======================prototypes================================*/
 
 

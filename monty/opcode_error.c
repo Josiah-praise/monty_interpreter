@@ -1,10 +1,13 @@
 #include "monty.h"
 
-void opcode_error()
+void opcode_error(void)
 {
-    dprintf(2, "L%d: unknown instruction %s\n", arguments.line_number, arguments.token_array[0]);
-    free_token_array();
-    fclose(arguments.fp);
-    free_stack();
+	char array[] = "unknown instruction";
+	unsigned int num = arguments.line_number;
+
+	dprintf(2, "L%d: %s %s\n", num, array, arguments.token_array[0]);
+	free_token_array();
+	fclose(arguments.fp);
+	free_stack();
 	exit(EXIT_FAILURE);
 }

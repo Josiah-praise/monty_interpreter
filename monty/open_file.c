@@ -1,9 +1,9 @@
 #include "monty.h"
 
-void open_file()
+void open_file(void)
 {
-    arguments.fp = fopen(arguments.filename, "r");
+	arguments.fp = fopen(arguments.filename, "r");
 
-    if (arguments.fp == NULL)
-        cant_open_error();
+	if (arguments.fp == NULL)
+		cant_open_error();
 }

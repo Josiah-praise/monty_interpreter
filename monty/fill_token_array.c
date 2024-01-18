@@ -2,5 +2,5 @@
 
 void fill_token_array(char *buffer, char *token)
 {
-    strcpy(buffer, token);
+	strcpy(buffer, token);
 }

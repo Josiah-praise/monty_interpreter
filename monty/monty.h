@@ -9,7 +9,7 @@
 #include <unistd.h>
 
 
-/*===============================Structs=================================================================*/
+/*===============================Structs=======================*/
 /**
 * struct stack_s - doubly linked list representation of a stack (or queue)
 * @n: integer
@@ -54,36 +54,36 @@ unsigned int stack_length;
 unsigned int stack_flag;
 stack_t *bottom;
 } argument_t;
-/*===============================Structs=================================================================*/
+/*===============================Structs===========================*/
 
 /*======================Global Variables===========================*/
 extern argument_t arguments;
 /*======================Global Variables===========================*/
 
 /*=======================prototypes================================*/
-stack_t *create_node();
+stack_t *create_node(void);
 void push(stack_t **stack, unsigned int line_number);
 void check_args(int argc);
-void usage_error();
-void open_file();
-void cant_open_error();
+void usage_error(void);
+void open_file(void);
+void cant_open_error(void);
 void set_filename_arg(char **argv);
-void tokenize();
-void free_token_array();
+void tokenize(void);
+void free_token_array(void);
 void fill_token_array(char *buffer, char *token);
-void malloc_error();
+void malloc_error(void);
 void print_token_array(char **token_array);
-void validate_opcode();
-void opcode_error();
-void execute_opcode_function();
-void free_stack();
+void validate_opcode(void);
+void opcode_error(void);
+void execute_opcode_function(void);
+void free_stack(void);
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
-void initialize_arguments();
+void initialize_arguments(void);
 /*=======================prototypes================================*/
 
 #endif /*_MONTY_H*/

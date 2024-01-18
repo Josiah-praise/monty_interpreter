@@ -1,10 +1,4 @@
-
-
-            #comment
-                push 3
-push 45
-        swap
-        #newline
-        love
+push 1
+push 2
+add
 pint
-pall

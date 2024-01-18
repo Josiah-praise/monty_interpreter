@@ -56,15 +56,9 @@ stack_t *bottom;
 } argument_t;
 /*===============================Structs=================================================================*/
 
-
-
-
 /*======================Global Variables===========================*/
 extern argument_t arguments;
 /*======================Global Variables===========================*/
-
-
-
 
 /*=======================prototypes================================*/
 stack_t *create_node();
@@ -87,8 +81,8 @@ void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
 void initialize_arguments();
 /*=======================prototypes================================*/
-
 
 #endif /*_MONTY_H*/

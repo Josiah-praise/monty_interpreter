@@ -1,4 +1,10 @@
 push 1
 push 2
+nop
+nop
+nop
+pall
 add
-pint
+nop
+nop
+pall
